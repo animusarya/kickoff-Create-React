@@ -1,17 +1,15 @@
-/* eslint no-unused-expressions: 0 */
-
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 // http://chir.ag/projects/name-that-color/
 export const colors = {
-	caribbeanGreen: '#00D1B2',
+  caribbeanGreen: '#00D1B2'
 };
 
 export default {
-	primary: colors.caribbeanGreen,
+  primary: colors.caribbeanGreen
 };
 
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   body {
 		margin: 0;
   	padding: 0;
