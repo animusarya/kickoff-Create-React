@@ -2,7 +2,6 @@
 
 > An boilerplate for frontend apps using ReactJs with batteries included.
 
-
 [DEMO](https://kickoff-reactjs.netlify.com/)
 
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/kickoff-reactjs)
@@ -43,7 +42,7 @@ yarn start
 
 ## Configuration
 
-Configuration file is located at `.src//utils/config.js`
+Configuration file is located at `.src/utils/config.js`
 
 ## Build
 
