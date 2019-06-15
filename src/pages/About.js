@@ -2,16 +2,18 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-import Content from '../components/Content';
+import { Content, Heading, Modal } from '../components/elements';
 
 export default () => (
   <Layout>
     <Seo title="About" description="Some description here." />
     <section className="section">
       <div className="container">
-        <h1 className="title">About</h1>
-        <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+        <Heading title="About" />
+        <Content
+          className="has-text-danger"
+          title="I am title"
+          data=" ssssss Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
           fermentum dapibus arcu, id sagittis lectus blandit at. Proin
           scelerisque, nulla eget accumsan tempor, enim tortor malesuada lorem,
           a venenatis est quam et lectus. Curabitur luctus libero vel enim
@@ -29,9 +31,10 @@ export default () => (
           tempus, ultrices ligula vel, pulvinar eros. Morbi fringilla orci ante,
           ac gravida magna pellentesque rhoncus. Nullam placerat mollis diam, at
           fringilla tellus dignissim ac. Proin pellentesque vehicula elit sed
-          commodo. Cras vitae tempus augue.
-        </Content>
+          commodo. Cras vitae tempus augue."
+        />
       </div>
+      <Modal />
     </section>
   </Layout>
 );

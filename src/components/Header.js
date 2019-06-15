@@ -1,24 +1,37 @@
-/* eslint jsx-a11y/no-redundant-roles: 0 */
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
-import config from '../utils/config';
+import { Modal } from '../components/elements';
 
-const LinkStyled = styled(Link)`
-  color: ${props => props.theme.primary};
-`
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeModal: false
+    };
+  }
 
-export default () => (
-  <nav className="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
-    <LinkStyled className="navbar-item" to="/">
-      {config.siteName}
-    </LinkStyled>
-    <LinkStyled className="navbar-item" to="/">Home</LinkStyled>
-    <LinkStyled className="navbar-item" to="/about">About</LinkStyled>
-    <LinkStyled className="navbar-item" to="/contact">Contact</LinkStyled>
-    <LinkStyled className="navbar-item" to="/cars">Cars</LinkStyled>
-    <LinkStyled className="navbar-item" to="/counter">Counter</LinkStyled>
-  </nav>
-);
+  toggleModal = () => {
+    const { activeModal } = this.state;
+    this.setState({ activeModal: !activeModal });
+  };
+
+  render() {
+    const { activeModal } = this.state;
+
+    return (
+      <div className="columns">
+        <div className="column is-four-fifths">
+          <hl> iam header</hl>
+        </div>
+        <div className="column">
+          <a className="button is-medium" onClick={this.toggleModal}>
+            Add New Events
+          </a>
+        </div>
+        <Modal active={activeModal} handelClose={this.toggleModal} />
+      </div>
+    );
+  }
+}
+
+export default Header;

@@ -44,8 +44,17 @@
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "lint-staged": {
-    "*.{js,jsx}": ["pretty-quick --staged", "eslint src/ --fix", "git add"]
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
   }
 }
